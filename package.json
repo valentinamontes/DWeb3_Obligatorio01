@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch scss/estilos.scss css/estilos.min.css",
+    "copyHTML": "copyfiles *.html dist",
+    "copyAssets": "copyfiles assets/* dist",
+    "buildCSS": "sass scss/estilos.scss css/estilos.min.css --style compressed",
+    "buildAll": "mkdir dis && npm run buildCSS && npm run copyHTML & npm run copyAssets"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "sass": "^1.77.3"
   }
 }
