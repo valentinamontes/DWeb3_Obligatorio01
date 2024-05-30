@@ -1,7 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//font-family
+$VM-font-family: 'Libre Baskerville', serif;
+$VM-font-family-secondary: 'Poppins', sans-serif;
 
 //colors
 $primary: #004918;
 $secondary: #F5FFEB;
+$VM-white: #FFFFFF;
+$VM-black: #000000;
+$VM-orange: #FB9471;
+$VM-grey-01: #D9D9D9;
+$VM-grey-02: #808080;
+$VM-grey-03: #5F6368;
 
 
-
+//border-radius
+$VM-border-radius-s: 5px;
+$VM-border-radius-m: 30px;
+$VM-border-radius-l: 45px;

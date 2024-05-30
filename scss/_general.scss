@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $VM-font-family-secondary, sans-serif;
+}
+
+.VM-title-H1{
+    font-family: $VM-font-family;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.VM-buttonPrimary{
+    color: $VM-white;
+    background: $primary;
+    padding: 10px 25px;
+    border-radius: $VM-border-radius-m;
+    text-decoration: none;
+    text-align: center;
+    height: fit-content;
+}
+
+.VM-hero{
+    background-color: $secondary;
+    height: 100vh;
+    min-height: 500px;
+    padding: 80px 15px 15px 15px;
+    margin-top: 56px;
+
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    div div:nth-of-type(1){
+        //  background-color: red;
+         max-width: 400px;
+         width: inherit;
+    }
+}
+
+
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 769px) {
+    .VM-hero > div{
+        height: 700px;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        gap: 50px;
+    }
+}

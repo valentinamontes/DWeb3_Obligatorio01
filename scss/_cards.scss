@@ -1,0 +1,56 @@
+
+    h2{
+        font-family: $VM-font-family;
+        font-size: 1.5em;   
+        font-weight: 700;
+        color: $VM-orange;
+        text-align: center;
+        width: 100%;
+    }
+
+    .VM-card{
+        border-radius: $VM-border-radius-l;
+        border: 1px solid $VM-grey-01;
+        max-width: 350px;
+        min-height: 420px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+
+        span{
+            text-align: center;
+            color: $VM-grey-03;
+            font-size: 2.5rem;
+        }
+
+        h3{
+            color: $primary;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        ul{
+            color: $VM-grey-02;
+            font-size: 0.8rem;
+        }
+
+        div:nth-last-of-type(1){
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+            flex-grow: 1;
+
+            a{
+                width: 100%;
+            }
+        }
+    }
+
+@media (min-width: 769px) {
+    .VM-plans{
+        &.container{
+            flex-direction: row;
+        }
+    }
+}
