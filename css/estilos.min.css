@@ -259,6 +259,9 @@ footer i {
   flex-wrap: wrap;
   gap: 20px;
 }
+.VM-contact.container {
+  padding: 20px;
+}
 .VM-contact h2, .VM-contact .h2 {
   width: 100%;
 }
