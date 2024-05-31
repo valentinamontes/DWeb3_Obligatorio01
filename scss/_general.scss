@@ -11,14 +11,30 @@
     font-weight: 700;
 }
 
-.VM-buttonPrimary{
-    color: $VM-white;
-    background: $primary;
+.VM-button{
     padding: 10px 25px;
     border-radius: $VM-border-radius-m;
     text-decoration: none;
     text-align: center;
     height: fit-content;
+    cursor: pointer;
+}
+
+.VM-buttonPrimary{
+    @extend .VM-button;
+    color: $VM-white;
+
+    background: $primary;
+
+    &:hover{
+        background-color: #006321;
+    }
+}
+
+.VM-buttonSecondary{
+    @extend .VM-button;
+    background-color: $secondary;
+    color: $primary;
 }
 
 .VM-hero{
@@ -35,18 +51,45 @@
         gap: 40px;
     }
 
-    div div:nth-of-type(1){
-        //  background-color: red;
+    div {
+        div:nth-of-type(1){
          max-width: 400px;
          width: inherit;
+        }
     }
 }
 
+.VM-action{
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .VM-action-surface{
+        background-image: url(../assets/food-01.webp);
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.5);
+        height: 100%;
+        width: 100%;
+        margin-top: 40px;
+
+        + div{
+            position: absolute;
+            padding: 20px;
+            text-align: center;
+        }
+    }
 
 
-@media (min-width: 576px) {
+    p{
+        color: $VM-white;
+        font-size: 1.4rem;
+    }
 
-}
+}	
+
 
 @media (min-width: 769px) {
     .VM-hero > div{
@@ -54,5 +97,15 @@
         flex-direction: row-reverse;
         justify-content: space-evenly;
         gap: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .VM-hero {
+        div{
+            div:nth-of-type(1){
+                max-width: 600px;
+            }
+        } 
     }
 }

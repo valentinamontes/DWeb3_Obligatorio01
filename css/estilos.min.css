@@ -1,15 +1,29 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 header {
   background-color: #F5FFEB;
+}
+header .navbar-brand {
+  color: #000000;
 }
 
 .navbar-brand img {
   width: 100px;
 }
 
-h2, .h2 {
+.VM-plans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.VM-plans.container {
+  padding: 20px;
+  margin-top: 20px;
+}
+.VM-plans h2, .VM-plans .h2 {
   font-family: "Libre Baskerville", serif;
   font-size: 1.5em;
   font-weight: 700;
@@ -17,8 +31,7 @@ h2, .h2 {
   text-align: center;
   width: 100%;
 }
-
-.VM-card {
+.VM-plans .VM-card {
   border-radius: 45px;
   border: 1px solid #D9D9D9;
   max-width: 350px;
@@ -28,35 +41,48 @@ h2, .h2 {
   gap: 20px;
   padding: 20px;
 }
-.VM-card span {
+.VM-plans .VM-card span {
   text-align: center;
   color: #5F6368;
   font-size: 2.5rem;
 }
-.VM-card h3, .VM-card .h3 {
+.VM-plans .VM-card h3, .VM-plans .VM-card .h3 {
   color: #004918;
   text-align: center;
   font-size: 1.2rem;
 }
-.VM-card ul {
+.VM-plans .VM-card ul {
   color: #808080;
   font-size: 0.8rem;
 }
-.VM-card div:nth-last-of-type(1) {
+.VM-plans .VM-card div:nth-last-of-type(1) {
   display: flex;
   align-items: flex-end;
   height: 100%;
   flex-grow: 1;
 }
-.VM-card div:nth-last-of-type(1) a {
+.VM-plans .VM-card div:nth-last-of-type(1) a {
   width: 100%;
 }
 
 @media (min-width: 769px) {
-  .VM-plans.container {
+  .VM-plans {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .VM-plans .VM-card {
+    min-height: inherit;
+    height: 500px;
+  }
+  .VM-plans .VM-card ul {
+    font-size: 0.9rem;
   }
 }
+footer i {
+  font-size: 1.2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -70,14 +96,26 @@ h2, .h2 {
   font-weight: 700;
 }
 
-.VM-buttonPrimary {
-  color: #FFFFFF;
-  background: #004918;
+.VM-button, .VM-buttonSecondary, .VM-buttonPrimary {
   padding: 10px 25px;
   border-radius: 30px;
   text-decoration: none;
   text-align: center;
   height: fit-content;
+  cursor: pointer;
+}
+
+.VM-buttonPrimary {
+  color: #FFFFFF;
+  background: #004918;
+}
+.VM-buttonPrimary:hover {
+  background-color: #006321;
+}
+
+.VM-buttonSecondary {
+  background-color: #F5FFEB;
+  color: #004918;
 }
 
 .VM-hero {
@@ -98,12 +136,43 @@ h2, .h2 {
   width: inherit;
 }
 
+.VM-action {
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.VM-action .VM-action-surface {
+  background-image: url(../assets/food-01.webp);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+}
+.VM-action .VM-action-surface + div {
+  position: absolute;
+  padding: 20px;
+  text-align: center;
+}
+.VM-action p {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+}
+
 @media (min-width: 769px) {
   .VM-hero > div {
     height: 700px;
     flex-direction: row-reverse;
     justify-content: space-evenly;
     gap: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .VM-hero div div:nth-of-type(1) {
+    max-width: 600px;
   }
 }
 /*!

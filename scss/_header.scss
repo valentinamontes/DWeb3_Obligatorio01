@@ -1,6 +1,10 @@
 
 header{
     background-color: $secondary;
+
+    .navbar-brand{
+        color: $VM-black;
+    }
 }
 
 .navbar-brand img{
