@@ -134,6 +134,15 @@ footer i {
 .VM-hero div div:nth-of-type(1) {
   max-width: 400px;
   width: inherit;
+  position: relative;
+}
+.VM-hero div div:nth-of-type(1) img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
 }
 
 .VM-action {
