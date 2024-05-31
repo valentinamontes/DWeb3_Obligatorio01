@@ -41,9 +41,6 @@ header .navbar-brand {
   gap: 20px;
   padding: 20px;
 }
-.VM-plans .VM-card:hover {
-  background-color: #F5FFEB;
-}
 .VM-plans .VM-card span {
   text-align: center;
   color: #5F6368;
@@ -62,7 +59,7 @@ header .navbar-brand {
 }
 .VM-plans .VM-card ul {
   color: #808080;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .VM-plans .VM-card ul:hover {
   cursor: default;
@@ -74,6 +71,48 @@ header .navbar-brand {
   flex-grow: 1;
 }
 .VM-plans .VM-card div:nth-last-of-type(1) a {
+  width: 100%;
+}
+
+.VM-recipes.container {
+  justify-content: center;
+}
+.VM-recipes h2, .VM-recipes .h2 {
+  width: 100%;
+}
+.VM-recipes .VM-card-recipes {
+  border-radius: 45px;
+  border: 1px solid #D9D9D9;
+  max-width: 350px;
+  min-height: 420px;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+}
+.VM-recipes .VM-card-recipes img {
+  border-radius: 45px 45px 0 0;
+}
+.VM-recipes .VM-card-recipes > div {
+  padding: 15px;
+  height: max-content;
+}
+.VM-recipes .VM-card-recipes > div h3, .VM-recipes .VM-card-recipes > div .h3 {
+  color: #000000;
+  font-size: 1rem;
+}
+.VM-recipes .VM-card-recipes > div ul, .VM-recipes .VM-card-recipes > div p {
+  color: #808080;
+  font-size: 0.9rem;
+}
+.VM-recipes .VM-card-recipes > div p {
+  margin-bottom: 0;
+}
+.VM-recipes .VM-card-recipes > div div {
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+}
+.VM-recipes .VM-card-recipes > div .VM-buttonPrimary {
   width: 100%;
 }
 
@@ -135,7 +174,7 @@ footer i {
   height: 100vh;
   min-height: 500px;
   padding: 80px 15px 15px 15px;
-  margin-top: 56px;
+  margin-top: 126px;
 }
 .VM-hero > div {
   display: flex;
@@ -202,6 +241,15 @@ footer i {
 }
 .VM-presentation p span {
   font-size: 2.2rem;
+}
+
+.VM-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 50px;
+  margin-top: 126px;
 }
 
 @media (min-width: 769px) {

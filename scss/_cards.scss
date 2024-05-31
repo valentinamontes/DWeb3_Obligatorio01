@@ -31,7 +31,7 @@
         padding: 20px;
 
         &:hover{
-            background-color: $secondary;
+            // background-color: $secondary;
         }
 
         span{
@@ -56,7 +56,7 @@
 
         ul{
             color: $VM-grey-02;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
 
             &:hover{
                 cursor: default;
@@ -75,6 +75,59 @@
         }
     }
 
+}
+
+.VM-recipes{
+    &.container{
+        justify-content: center;
+    }
+    
+    h2{
+        width: 100%;
+    }
+
+    .VM-card-recipes{
+        border-radius: $VM-border-radius-l;
+        border: 1px solid $VM-grey-01;
+        max-width: 350px;
+        min-height: 420px;
+        width: min-content;
+        display: flex;
+        flex-direction: column;
+
+        img{
+            border-radius: 45px 45px 0 0;
+        }
+
+        >div{
+            padding: 15px;
+            height: max-content;
+
+            h3{
+                color: $VM-black;
+                font-size: 1rem;
+            }
+
+            ul, p{
+                color: $VM-grey-02;
+                font-size: 0.9rem;
+            }
+
+            p{
+                margin-bottom: 0;
+            }
+
+            div{
+                height: 80px;
+                display: flex;
+                align-items: flex-end;
+            }
+
+            .VM-buttonPrimary{
+                width: 100%;
+            }
+        }
+}
 }
 
 @media (min-width: 769px) {
