@@ -100,6 +100,32 @@
 
 }	
 
+.VM-presentation{
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    >div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 80%;
+            max-width: 350px;
+            border-radius: 100%;
+        }
+    }
+
+    p{
+        span{
+            font-size: 2.2rem;
+        }
+    }
+}
+
 
 @media (min-width: 769px) {
     .VM-hero > div{
@@ -107,6 +133,14 @@
         flex-direction: row-reverse;
         justify-content: space-evenly;
         gap: 50px;
+    }
+
+    .VM-presentation{
+        flex-direction: row;
+
+        >div{
+            width: 75%;
+        }
     }
 }
 
