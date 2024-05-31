@@ -137,7 +137,6 @@
 
 .VM-contact{
     margin-top: 126px;
-    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -195,6 +194,15 @@
     .VM-contact-info{
         align-content: center;
         flex-grow: 1;
+        position: relative;
+
+        div:nth-of-type(1){
+            display: none;
+
+            img{
+                width: 100%;
+            }
+        }
 
         div{
             display: flex;
@@ -204,7 +212,7 @@
 }
 
 footer{
-    position: sticky;
+    position: absolute;
     width: 100%;
     bottom: 0;
     background-color: $VM-white;
@@ -226,6 +234,13 @@ footer{
             width: 75%;
         }
     }
+
+    .VM-contact{
+        &.container{
+            padding-top: 50px;
+        }
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -235,5 +250,18 @@ footer{
                 max-width: 600px;
             }
         } 
+    }
+
+    .VM-contact{
+        .VM-contact-info{
+            div:nth-of-type(1){
+                display: flex;
+                position: absolute;
+                top: 0px;
+                right: 90px;
+                height: 367px;
+                width: auto;
+            }
+        }
     }
 }

@@ -254,7 +254,6 @@ footer i {
 
 .VM-contact {
   margin-top: 126px;
-  padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -303,6 +302,13 @@ footer i {
 .VM-contact .VM-contact-info {
   align-content: center;
   flex-grow: 1;
+  position: relative;
+}
+.VM-contact .VM-contact-info div:nth-of-type(1) {
+  display: none;
+}
+.VM-contact .VM-contact-info div:nth-of-type(1) img {
+  width: 100%;
 }
 .VM-contact .VM-contact-info div {
   display: flex;
@@ -310,7 +316,7 @@ footer i {
 }
 
 footer {
-  position: sticky;
+  position: absolute;
   width: 100%;
   bottom: 0;
   background-color: #FFFFFF;
@@ -329,10 +335,21 @@ footer {
   .VM-presentation > div {
     width: 75%;
   }
+  .VM-contact.container {
+    padding-top: 50px;
+  }
 }
 @media (min-width: 992px) {
   .VM-hero div div:nth-of-type(1) {
     max-width: 600px;
+  }
+  .VM-contact .VM-contact-info div:nth-of-type(1) {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 90px;
+    height: 367px;
+    width: auto;
   }
 }
 /*!
