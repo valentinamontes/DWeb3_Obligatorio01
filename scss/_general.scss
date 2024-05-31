@@ -135,6 +135,77 @@
     margin-top: 126px;
 }
 
+.VM-contact{
+    margin-top: 126px;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    h2{
+        width: 100%;
+    }
+
+    form{
+        flex-grow: 1;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 20px;
+        border-radius: $VM-border-radius-m;
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        height: 600px;
+
+        label{
+            padding-top: 20px;
+        }
+
+        button.dropdown-toggle{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        input, textarea, select{
+            padding: 6px 10px;
+            border-radius: $VM-border-radius-s;
+            border: solid 1px $VM-grey-01;
+
+            &::placeholder{
+                color: $VM-grey-01;
+            }
+
+            &:focus-visible{
+                outline-color: $VM-grey-02;
+                outline: solid 1px;
+            }
+        }
+
+        input[type="submit"]{
+            cursor: pointer;
+            margin-top: 40px;
+        }
+    }
+
+    .VM-contact-info{
+        align-content: center;
+        flex-grow: 1;
+
+        div{
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+
+footer{
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    background-color: $VM-white;
+}
+
 
 @media (min-width: 769px) {
     .VM-hero > div{
